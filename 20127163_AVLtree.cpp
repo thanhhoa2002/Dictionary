@@ -342,7 +342,10 @@ void delAWord(Node* N){
         key[0] -= 32;
 
     N = deleteNode(N, key);
-
+    if (N == NULL){
+        cout << "Can't find the word.\n";
+        return;
+    }
     cout << "Successfully deleted...\n";
 }
 
