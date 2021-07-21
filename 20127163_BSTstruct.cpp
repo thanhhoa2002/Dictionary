@@ -279,6 +279,7 @@ void save(Tree t)
 
     f.open(fn + ".txt", ios::out);
     outputTree(t, f);
+    f.close();
 }
 
 void menu(Tree t){
