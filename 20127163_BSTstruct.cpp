@@ -29,16 +29,6 @@ Node *createNode(Dictionary D)
     return p;
 }
 
-void deleteTree(Tree &t)
-{
-    if (t)
-    {
-        deleteTree(t->left);
-        deleteTree(t->right);
-        delete t;
-    }
-}
-
 void addNode(Tree &t, Node *node)
 {
     if (t)
