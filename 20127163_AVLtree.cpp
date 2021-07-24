@@ -209,36 +209,7 @@ void delRepeat(Dictionary *D, int &size)
         }
     }
 }
-void quickSort(Dictionary *D, int l, int r)
-{
-    if (l > r)
-        return;
 
-    string s = D[(l + r) / 2].word;
-
-    int i = l;
-    int j = r;
-
-    while (i <= j)
-    {
-        while (D[i].word < s)
-            ++i;
-        while (D[j].word > s)
-            --j;
-
-        if (i <= j)
-        {
-            swap(D[i], D[j]);
-            ++i;
-            --j;
-        }
-    }
-
-    if (l < j)
-        quickSort(D, l, j);
-    if (r > i)
-        quickSort(D, i, r);
-}
 void load(Node *&N)
 {
     fstream f;
